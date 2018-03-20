@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class OutputParser {
+public final class OutputParser {
 
     private static final String WALL_REPRESENTATION = "#";
     private static final String CLEAR_PATH_REPRESENTATION = " ";
@@ -18,6 +18,10 @@ public class OutputParser {
     private static final String MAZE_PATH_REPRESENTATION = "X";
     private static final String EMPTY_STRING = "";
 
+
+    private OutputParser() {
+        //private constructor to prevent instantiation.
+    }
 
     /**
      * Returns the output in the desired format by replacing the maze walls, clear paths, start, exit, and chosen path with the appropriate signs.
